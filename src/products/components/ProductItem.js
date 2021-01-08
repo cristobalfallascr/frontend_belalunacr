@@ -1,7 +1,7 @@
 import React from "react";
 
-import Card from "../../shared/UIElements/Card";
-import Button from "../../shared/FormElements/Button";
+import Card from "../../shared/components/UIElements/Card";
+import Button from "../../shared/components/FormElements/Button";
 import "./ProductItem.css";
 
 function ProductItem(props) {
