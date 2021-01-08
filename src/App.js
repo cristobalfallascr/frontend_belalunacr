@@ -7,8 +7,15 @@ import {
 } from "react-router-dom";
 import Auth from "./products/pages/Auth";
 
-import PopProducts from "./products/pages/PopProducts";
+// Navigation elements
 import MainNavigation from "./shared/components/navigation/MainNavigation";
+
+
+//Web Pages
+import PopProducts from "./products/pages/PopProducts";
+import Catalog from "./products/pages/Catalog";
+
+
 
 function App() {
   return (
@@ -21,6 +28,9 @@ function App() {
           </Route>
           <Route path="/acceder" exact>
             <Auth/>
+          </Route>
+          <Route path="/catalogo">
+            <Catalog/>
           </Route>
           
         </Switch>
