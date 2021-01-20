@@ -6,6 +6,10 @@ import imgTest3 from "../../2020-09-07-095658270.jpg";
 
 import CatalogNavigation from "../components/CatalogNavigation";
 
+//import styles
+
+import "./Catalog.css";
+
 const DUMMY_CATALOG = [
   {
     id: "p1",
@@ -48,17 +52,22 @@ const DUMMY_CATALOG = [
 const Catalog = () => {
   return (
     <React.Fragment>
-      <ul>
-        {DUMMY_CATALOG.map((product) => {
-          return (
-            <CatalogNavigation
-              key={product.id}
-              id={product.id}
-              category={product.category}
-            />
-          );
-        })}
-      </ul>
+    <h1 className="catalog-title">
+      Selecciona una categoria para ver productos
+    </h1>
+      
+        <ul className="catalog-item-container">
+          {DUMMY_CATALOG.map((product) => {
+            return (
+              <CatalogNavigation
+                key={product.id}
+                id={product.id}
+                category={product.category}
+              />
+            );
+          })}
+        </ul>
+      
     </React.Fragment>
   );
 };

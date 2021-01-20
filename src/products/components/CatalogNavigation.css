@@ -1,0 +1,86 @@
+.cat-nav-links {
+  list-style: none;
+  margin: 5px 10px;
+  padding: 20px;
+  text-align: center;
+  width: 15%;
+  height: auto;
+  color: white;
+  text-transform: capitalize;
+
+  justify-content: space-around;
+  align-items: center;
+  font-family: "Quicksand", sans-serif;
+  font-size: 35px;
+  background-color: #ff0055;
+}
+
+.cat-nav-links li {
+}
+
+.cat-nav-links a {
+  border: 1px solid transparent;
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem;
+}
+
+.cat-nav-links a:hover {
+  color: #ba40f5;
+}
+.cat-nav-links a:active {
+  background: #ba40f5;
+  color: white;
+}
+.cat-nav-links a.active {
+  background: #ba40f5;
+  color: white;
+}
+
+.cat-nav-links button {
+  cursor: pointer;
+  border: none;
+  color: #292929;
+  background: transparent;
+  padding: 0.5rem;
+  font: inherit;
+}
+
+.cat-nav-links button:focus {
+  outline: none;
+}
+
+.cat-nav-links button:hover,
+.cat-nav-links button:active {
+  background: #292929;
+  color: white;
+}
+
+@media (min-width: 768px) {
+  .cat-nav-links {
+    flex-direction: row;
+  }
+
+  .cat-nav-links li {
+    margin: 0 0.5rem;
+  }
+
+  .cat-nav-links a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .cat-nav-links button {
+    border: 1px solid white;
+    color: white;
+    background: transparent;
+  }
+
+  .cat-nav-links button:hover {
+    color: #ba40f5;
+  }
+  .cat-nav-links button:active {
+    background: #ba40f5;
+    color: white;
+  }
+}
