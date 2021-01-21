@@ -5,6 +5,7 @@ import imgTest2 from "../../2020-09-07-095012514.jpg";
 import imgTest3 from "../../2020-09-07-095658270.jpg";
 
 import CatalogNavigation from "../components/CatalogNavigation";
+import ProductList from "../components/ProductList";
 
 //import styles
 
@@ -52,22 +53,35 @@ const DUMMY_CATALOG = [
 const Catalog = () => {
   return (
     <React.Fragment>
-    <h1 className="catalog-title">
-      Selecciona una categoria para ver productos
-    </h1>
-      
-        <ul className="catalog-item-container">
-          {DUMMY_CATALOG.map((product) => {
-            return (
-              <CatalogNavigation
-                key={product.id}
-                id={product.id}
-                category={product.category}
-              />
-            );
-          })}
-        </ul>
-      
+      <h1 className="catalog-title">
+        Selecciona una categoria para ver productos
+      </h1>
+
+      <ul className="catalog-item-container">
+        {DUMMY_CATALOG.map((product) => {
+          return (
+            <CatalogNavigation
+              key={product.id}
+              id={product.id}
+              category={product.category}
+            />
+          );
+        })}
+      </ul>
+      <div className="main-container">
+        <div class="catalog-product-filters-container">
+        <h2> Filtros</h2>
+          <p>price</p>
+          <p>colors</p>
+          <p> estampados</p>
+          <p> lisos</p>
+          <p> otros</p>
+        </div>
+
+        <div class="catalog-product-container">
+          <ProductList items={DUMMY_CATALOG} />
+        </div>
+      </div>
     </React.Fragment>
   );
 };

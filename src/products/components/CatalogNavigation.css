@@ -1,18 +1,19 @@
 .cat-nav-links {
   list-style: none;
-  margin: 5px 10px;
-  padding: 20px;
+  margin: 10px;
+  
   text-align: center;
-  width: 15%;
+  width: auto;
   height: auto;
-  color: white;
+ 
   text-transform: capitalize;
-
+  text-shadow: 0 0 1px rgb(66, 66, 66);
   justify-content: space-around;
   align-items: center;
   font-family: "Quicksand", sans-serif;
-  font-size: 35px;
-  background-color: #ff0055;
+  font-size: 25px;
+  background-color: none;
+  border-bottom: 2px solid #ff0055;
 }
 
 .cat-nav-links li {
@@ -20,7 +21,7 @@
 
 .cat-nav-links a {
   border: 1px solid transparent;
-  color: white;
+  color: #ff0055;
   text-decoration: none;
   padding: 0.5rem;
 }
@@ -56,31 +57,16 @@
   color: white;
 }
 
+@media (max-width: 768px) {
+  
+}
+
 @media (min-width: 768px) {
+}
+
+@media only screen and (max-width: 600px) {
   .cat-nav-links {
-    flex-direction: row;
-  }
-
-  .cat-nav-links li {
-    margin: 0 0.5rem;
-  }
-
-  .cat-nav-links a {
-    color: white;
-    text-decoration: none;
-  }
-
-  .cat-nav-links button {
-    border: 1px solid white;
-    color: white;
-    background: transparent;
-  }
-
-  .cat-nav-links button:hover {
-    color: #ba40f5;
-  }
-  .cat-nav-links button:active {
-    background: #ba40f5;
-    color: white;
+    flex-direction: column;
+    width: 95%;
   }
 }

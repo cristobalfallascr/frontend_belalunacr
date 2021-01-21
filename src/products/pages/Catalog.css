@@ -1,13 +1,43 @@
-.catalog-item-container{
+.main-container{
     display: flex;
-    justify-content: center;
-   
-    margin:5px 10px
+}
+.catalog-product-filters-container{
+    margin-left:10px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.616);
+    width: 15%;
+    height: auto;
+}
+.catalog-item-container {
+  display: flex;
+  justify-content: center;
+  margin: 5px 10px;
 }
 
-.catalog-title{
-    text-align: center;
-    font-family: 'Quicksand', sans-serif;
-    color:white;
-    text-shadow: 1px 1px black;
+.catalog-title {
+  text-align: center;
+  font-family: "Quicksand", sans-serif;
+  color: white;
+  text-shadow: 1px 1px black;
+}
+
+.catalog-product-container{
+    border-top: 1px solid white;
+    margin: auto;
+    justify-content: right;
+    width: 70%;
+    display: flex;
+}
+
+@media only screen and (max-width: 600px) {
+  .catalog-item-container {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+  }
+
+  ul {
+    padding: auto;
+    padding-inline-start: 4px;
+  }
 }

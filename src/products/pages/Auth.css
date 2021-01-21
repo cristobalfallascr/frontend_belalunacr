@@ -1,0 +1,72 @@
+.login-Card {
+  width: 40%;
+  margin: auto;
+  font-family: "Quicksand", sans-serif;
+  background-color: rgba(247, 247, 247, 0.26);
+  border-radius: 0%;
+
+  box-shadow: none;
+}
+
+.login-title {
+  text-align: center;
+}
+
+.login-title h2 {
+  color: #ff0055;
+}
+
+.form-control input {
+  background: transparent;
+  border: 2px solid #ff0055;
+  height: 3rem;
+  
+}
+
+.form-control textarea,
+.form-control input {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #ff0055;
+  height: 3rem;
+}
+.form-control--invalid input,
+.form-control--invalid textarea {
+  border-bottom: 3px solid #ba40f5;
+  background: none;
+}
+.form-control--invalid label,
+.form-control--invalid p {
+  color: #ba40f5;
+}
+
+.form-control input:focus,
+.form-control textarea:focus {
+  outline: none;
+  background: transparent;
+  border-color: #ff0055;
+}
+
+input:-internal-autofill-selected {
+  outline: none;
+  background: transparent;
+  border-color: #ff0055;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px #fdcde0 inset !important;
+}
+
+
+@media (min-width: 768px) {
+    .login-Card {
+      
+    }
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .login-Card {
+        width:95%
+    }}
