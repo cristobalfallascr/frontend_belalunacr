@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import imgTest1 from "../../2020-09-07-094404915.jpg";
 import imgTest2 from "../../2020-09-07-095012514.jpg";
@@ -6,6 +6,7 @@ import imgTest3 from "../../2020-09-07-095658270.jpg";
 
 import CatalogNavigation from "../components/CatalogNavigation";
 import ProductList from "../components/ProductList";
+import { CatalogProductItem } from "../components/ProductItem";
 
 //import styles
 
@@ -48,9 +49,71 @@ const DUMMY_CATALOG = [
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
+  ,
+  {
+    id: "p4",
+    title: "Gatito",
+    type: "blusas",
+    category: "blusas",
+    colors: "",
+    fabric: "",
+    imageUrl: imgTest2,
+    price: "$20",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  },
+  {
+    id: "p5",
+    title: "Gatito",
+    type: "blusas",
+    category: "blusas",
+    colors: "",
+    fabric: "",
+    imageUrl: imgTest2,
+    price: "$20",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  },
+  ,
+  {
+    id: "p6",
+    title: "Gatito",
+    type: "blusas",
+    category: "blusas",
+    colors: "",
+    fabric: "",
+    imageUrl: imgTest2,
+    price: "$20",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  },
+  ,
+  {
+    id: "p7",
+    title: "Gatito",
+    type: "blusas",
+    category: "blusas",
+    colors: "",
+    fabric: "",
+    imageUrl: imgTest2,
+    price: "$20",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  },
 ];
 
+const catalogCategories = ["hombre", "mujer", "ninos", "blusas"];
+  
+  
+
+
 const Catalog = () => {
+  const [showCategory, setShowCategory]  = useState("mujer")
+  const filterCatalog = (event) => {
+    
+     setShowCategory(event.target.id)
+    
+  };
   return (
     <React.Fragment>
       <h1 className="catalog-title">
@@ -58,28 +121,23 @@ const Catalog = () => {
       </h1>
 
       <ul className="catalog-item-container">
-        {DUMMY_CATALOG.map((product) => {
-          return (
-            <CatalogNavigation
-              key={product.id}
-              id={product.id}
-              category={product.category}
-            />
-          );
-        })}
+        <CatalogNavigation
+          categories={catalogCategories}
+          onClick={filterCatalog}
+        />
       </ul>
       <div className="main-container">
         <div class="catalog-product-filters-container">
-        <h2> Filtros</h2>
-          <p>price</p>
-          <p>colors</p>
-          <p> estampados</p>
-          <p> lisos</p>
-          <p> otros</p>
+          <h2> Filtros</h2>
+          <p>Precio</p>
+          <p>Colores</p>
+          <p> Estampados</p>
+          <p> Lisos</p>
+          <p> Otros</p>
         </div>
 
         <div class="catalog-product-container">
-          <ProductList items={DUMMY_CATALOG} />
+          <ProductList listing="catalog" items={DUMMY_CATALOG} filter={showCategory}/>
         </div>
       </div>
     </React.Fragment>

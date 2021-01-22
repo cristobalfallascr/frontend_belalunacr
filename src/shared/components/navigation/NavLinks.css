@@ -22,14 +22,16 @@
 }
 
 .nav-links a:hover {
-  color: #ba40f5;
+  color: #f7ccbb;
 }
 .nav-links a:active {
-  background: #ba40f5;
+  background: none;
+  border-bottom: 2px dotted #f7ccbb ;
   color: white;
 }
 .nav-links a.active {
-  background: #ba40f5;
+  background: none;
+  border-bottom: 2px dotted #f7ccbb ;
   color: white;
 }
 
@@ -73,10 +75,15 @@
   }
 
   .nav-links button:hover {
-    color: #ba40f5;
+    color: #f7ccbb;
   }
   .nav-links button:active {
-    background: #ba40f5;
+    background: #f7ccbb34;
     color: white;
+    border-bottom: 2px dotted #f7ccbb ;
   }
+}
+
+.centered-aligment{
+  vertical-align: bottom;
 }

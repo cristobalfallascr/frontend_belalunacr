@@ -5,3 +5,12 @@
   width: 90%;
   
 }
+
+.catalog-product-list {
+  list-style: none;
+  margin: 1rem auto;
+  padding: 0;
+  width:100%;
+  
+}
+

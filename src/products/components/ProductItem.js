@@ -17,13 +17,39 @@ function ProductItem(props) {
           <p>{props.description}</p>
         </div>
         <div className="product-item__actions">
-          <Button inverse to={`/products/${props.id}`}>VER</Button>
+          <Button inverse to={`/products/${props.id}`}>
+            VER
+          </Button>
           <Button to={`/products/${props.id}`}>COMPRAR</Button>
-
         </div>
       </Card>
     </li>
   );
 }
 
+const CatalogProductItem = (props) => {
+  return (
+    <li className="catalog-item">
+      <Card className="catalog-item__content">
+        <h2 className="catalog-item__title">{props.title}</h2>
+        <div className="catalog-item__image">
+          <img src={props.image} alt={props.title} />
+        </div>
+        <div className="catalog-item__info">
+          <h3 className="catalog-item__price">{props.price}</h3>
+          <p>{props.description}</p>
+        </div>
+        <div className="catalog-item__actions">
+          <Button inverse to={`/products/${props.id}`}>
+            VER
+          </Button>
+          <Button to={`/products/${props.id}`}>COMPRAR</Button>
+        </div>
+      </Card>
+    </li>
+  );
+};
+
 export default ProductItem;
+
+export { CatalogProductItem };
