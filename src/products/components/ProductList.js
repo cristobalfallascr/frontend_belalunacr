@@ -20,18 +20,20 @@ function ProductList(props) {
 
   if (props.listing === "catalog") {
     return (
-      <ul className="catalog-product-list">
-        {props.items.map((product) => (
-          <CatalogProductItem
-            key={product.id}
-            id={product.id}
-            image={product.imageUrl}
-            title={product.title}
-            description={product.description}
-            price={product.price}
-          />
-        ))}
-      </ul>
+      <React.Fragment>
+        <ul className="catalog-product-list">
+          {props.items.map((product) => (
+            <CatalogProductItem
+              key={product.id}
+              id={product.id}
+              image={product.imageUrl}
+              title={product.title}
+              description={product.description}
+              price={product.price}
+            />
+          ))}
+        </ul>
+      </React.Fragment>
     );
   }
   return (

@@ -103,29 +103,27 @@ const DUMMY_CATALOG = [
 ];
 
 const catalogCategories = ["hombre", "mujer", "ninos", "blusas"];
-  
-  
-
 
 const Catalog = () => {
-  const [showCategory, setShowCategory]  = useState("mujer")
+  const [showCategory, setShowCategory] = useState("mujer");
   const filterCatalog = (event) => {
-    
-     setShowCategory(event.target.id)
-    
+    setShowCategory(event.target.id);
   };
   return (
     <React.Fragment>
-      <h1 className="catalog-title">
-        Selecciona una categoria para ver productos
-      </h1>
+      <div className="catalog-headers">
+        <h2 className="catalog-title">
+          Categoría:
+        </h2>
 
-      <ul className="catalog-item-container">
-        <CatalogNavigation
-          categories={catalogCategories}
-          onClick={filterCatalog}
-        />
-      </ul>
+        <ul className="catalog-item-container">
+          <CatalogNavigation
+            categories={catalogCategories}
+            onClick={filterCatalog}
+          />
+        </ul>
+      </div>
+
       <div className="main-container">
         <div class="catalog-product-filters-container">
           <h2> Filtros</h2>
@@ -137,7 +135,11 @@ const Catalog = () => {
         </div>
 
         <div class="catalog-product-container">
-          <ProductList listing="catalog" items={DUMMY_CATALOG} filter={showCategory}/>
+          <ProductList
+            listing="catalog"
+            items={DUMMY_CATALOG}
+            filter={showCategory}
+          />
         </div>
       </div>
     </React.Fragment>

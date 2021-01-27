@@ -1,11 +1,10 @@
 .cat-nav-links {
   list-style: none;
   margin: 10px;
-  
   text-align: center;
   width: auto;
   height: auto;
- 
+
   text-transform: capitalize;
   text-shadow: 0 0 1px rgb(66, 66, 66);
   justify-content: space-around;
@@ -13,7 +12,6 @@
   font-family: "Quicksand", sans-serif;
   font-size: 25px;
   background-color: none;
-  border-bottom: 2px solid #ff0055;
 }
 
 .cat-nav-links li {
@@ -23,18 +21,25 @@
   border: 1px solid transparent;
   color: #ff0055;
   text-decoration: none;
-  padding: 0.5rem;
+  font-size: 20px;
 }
 
 .cat-nav-links a:hover {
-  color: #ba40f5;
+  color: white;
+  padding-bottom: 0;
+  border-bottom: 1px solid #ff0055;
+}
+
+.cat-nav-links a:focus {
+  color: white;
+  padding-bottom: 0;
+  border-bottom: 1px solid #ff0055;
 }
 .cat-nav-links a:active {
-  background: #ba40f5;
   color: white;
+  border: none;
 }
 .cat-nav-links a.active {
-  background: #ba40f5;
   color: white;
 }
 
@@ -49,6 +54,7 @@
 
 .cat-nav-links button:focus {
   outline: none;
+  color: white;
 }
 
 .cat-nav-links button:hover,
@@ -57,8 +63,13 @@
   color: white;
 }
 
+.cat.nav-links button:active {
+  background: #f7ccbb34;
+  color: white;
+  border-bottom: 2px dotted #f7ccbb;
+}
+
 @media (max-width: 768px) {
-  
 }
 
 @media (min-width: 768px) {
@@ -68,5 +79,12 @@
   .cat-nav-links {
     flex-direction: column;
     width: 95%;
+    font-size: 10px;
   }
+
+  .cat-nav-links a {
+
+    font-size: 15px;
+  }
+  
 }
